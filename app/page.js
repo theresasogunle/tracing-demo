@@ -3,7 +3,7 @@ export const dynamic = "force-dynamic";
 
 async function getUsers() {
   const res = await fetch(
-    "https://" + process.env.NEXT_PUBLIC_VERCEL_URL + "/api/users"
+    "https://" + "tracing-demo-xi.vercel.app" + "/api/users"
   );
   if (!res.ok) throw new Error("Failed to fetch users");
   return res.json();
