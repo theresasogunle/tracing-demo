@@ -1,3 +1,6 @@
+
+export const dynamic = "force-dynamic";
+
 async function getUsers() {
   const res = await fetch("https://" + process.env.VERCEL_URL + "/api/users");
   if (!res.ok) throw new Error("Failed to fetch users");
@@ -14,7 +17,6 @@ export default async function Index() {
         {users.map((user) => (
           <div key={user.id} className="border p-4">
             <h3>{user.name}</h3>
-
           </div>
         ))}
       </div>
